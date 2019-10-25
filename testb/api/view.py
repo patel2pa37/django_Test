@@ -2,7 +2,7 @@
 from testb.models import Test #from django model
 from .serializers import testserializers #from serializer model
 #prebuild viewsets
-from rest_framework import viewsets, ListAPIView, RetrieveAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+from rest_framework import viewsets
 
 '''
 view class is created after serializers,
