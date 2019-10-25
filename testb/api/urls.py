@@ -3,13 +3,14 @@ from django.urls import path
 from rest_framework.routers import DefaultRouter
 from .view import testviewset
 
-
-
+#registers the testviewset to the main urls 
+#ex http://localhost:8000/api 
+#ex http://localhost:8000/api/1 
 router = DefaultRouter()
 router.register(r'', testviewset, base_name='test')
 urlpatterns = router.urls
 
-
+#above code more efficient then bottom
 '''
 urlpatterns = [
     path('',testlistview.as_view()),

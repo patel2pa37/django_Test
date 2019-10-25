@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#static and media (url and root) allow image file to be stored in the media folder
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
@@ -44,13 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'testb',
-    'corsheaders'
+    'rest_framework', #need this
+    'testb', #testb our app component
+    'corsheaders' #need this for frontend commnication
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware', #need this for frontend commnication 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,6 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#this dictates communication protocol 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
@@ -139,4 +141,4 @@ REST_FRAMEWORK = {
     ),
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True #need this for frontend commnication
