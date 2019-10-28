@@ -3,6 +3,7 @@ from django.db import models
 # Creating our model
 class Test(models.Model):
     #defing fields for JSON
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=120)
     content = models.TextField()
     imageInfo = models.ImageField(upload_to = 'ImageInfo', blank=False) #the image field being saved to media.ImageInfo

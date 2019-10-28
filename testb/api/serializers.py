@@ -15,4 +15,4 @@ from testb.models import Test  #importing django model from testb folder
 class testserializers(serializers.ModelSerializer):
     class Meta:
         model = Test #setting serizlizers model to django model 
-        fields = ('title','content', 'imageInfo', 'lon', 'lat', 'boxChecked') #passing in the fields 
+        fields = ('id','title','content', 'imageInfo', 'lon', 'lat', 'boxChecked') #passing in the fields 
